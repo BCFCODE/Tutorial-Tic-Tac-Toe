@@ -1,15 +1,14 @@
-import { useState } from "react";
+interface Props {
+  value: string | null;
+  onSquareClick: () => void;
+}
 
-export default function Square() {
-  const [value, setValue] = useState<string | null>(null);
-
-  const handleClick = () => {
-    setValue("X");
-  };
-
+const Square = ({ value, onSquareClick }: Props) => {
   return (
-    <button onClick={handleClick} type="button" className="square">
+    <button onClick={onSquareClick} type="button" className="square">
       {value}
     </button>
   );
-}
+};
+
+export default Square;
