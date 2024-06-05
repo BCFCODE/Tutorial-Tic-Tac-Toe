@@ -5,19 +5,19 @@ const Board = () => {
   return (
     <>
       <BoardRow>
-        <Square>1</Square>
-        <Square>2</Square>
-        <Square>3</Square>
+        <Square value="1" />
+        <Square value="2" />
+        <Square value="3" />
       </BoardRow>
       <BoardRow>
-        <Square>4</Square>
-        <Square>5</Square>
-        <Square>6</Square>
+        <Square value="4" />
+        <Square value="5" />
+        <Square value="6" />
       </BoardRow>
       <BoardRow>
-        <Square>7</Square>
-        <Square>8</Square>
-        <Square>9</Square>
+        <Square value="7" />
+        <Square value="8" />
+        <Square value="9" />
       </BoardRow>
     </>
   );

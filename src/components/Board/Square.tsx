@@ -1,11 +1,11 @@
 interface Props {
-  children: string | number;
+  value: string;
 }
 
-export default function Square({ children }: Props) {
+export default function Square({ value }: Props) {
   return (
     <button type="button" className="square">
-      {children}
+      {value}
     </button>
   );
 }
