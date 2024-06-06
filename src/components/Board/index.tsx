@@ -3,12 +3,15 @@ import BoardRow from "./BoardRow";
 import Square from "./Square";
 
 const Board = () => {
+  const [xIsNext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   const handleClick = (i: number) => {
+    if(squares[i]) return;
     const nextSquares = [...squares];
-    nextSquares[i] = "X";
+    xIsNext ? (nextSquares[i] = "X") : (nextSquares[i] = "O");
     setSquares(nextSquares);
+    setXIsNext(!xIsNext);
   };
 
   return (
