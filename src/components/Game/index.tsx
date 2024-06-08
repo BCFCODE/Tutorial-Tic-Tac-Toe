@@ -15,7 +15,7 @@ const Game = () => {
     const description = move > 0 ? `Go to move #${move}` : `Go to game start`;
 
     return (
-      <li>
+      <li key={move}>
         <button type="button" onClick={() => jumpTo(move)}>
           {description}
         </button>
