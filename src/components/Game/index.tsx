@@ -11,13 +11,27 @@ const Game = () => {
     setXIsNext(!xIsNext);
   };
 
+  const moves = history.map((squares, move) => {
+    const description = move > 0 ? `Go to move #${move}` : `Go to game start`;
+
+    return (
+      <li>
+        <button type="button" onClick={() => jumpTo(move)}>
+          {description}
+        </button>
+      </li>
+    );
+  });
+
+  const jumpTo = (nextMove) => {};
+
   return (
     <div className="game">
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
-        <ol>{/* TODO */}</ol>
+        <ol>{moves}</ol>
       </div>
     </div>
   );
